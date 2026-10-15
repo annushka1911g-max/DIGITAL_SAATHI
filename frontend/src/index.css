@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #0F2C59;
+    --primary-light: #1E4E8C;
+    --primary-dark: #0A1E3D;
+    --accent: #E85A4F;
+    --accent-hover: #D84337;
+    --success: #10B981;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+    --bg-base: #F8FAFC;
+    --card-bg: #FFFFFF;
+    --text-primary: #1E293B;
+    --text-secondary: #64748B;
+    --border-color: #E2E8F0;
+  }
+
+  body.dark-mode {
+    --bg-base: #0F172A;
+    --card-bg: #1E293B;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --border-color: #334155;
+  }
+
+  body.high-contrast {
+    --primary: #000080;
+    --bg-base: #FFFFFF;
+    --card-bg: #FFFFFF;
+    --text-primary: #000000;
+    --text-secondary: #000000;
+    --border-color: #000000;
+    --accent: #B91C1C;
+    --success: #047857;
+  }
+
+  body.high-contrast.dark-mode {
+    --bg-base: #000000;
+    --card-bg: #000000;
+    --text-primary: #FFFFFF;
+    --text-secondary: #FFFFFF;
+    --border-color: #FFFFFF;
+    --accent: #FCA5A5;
+    --success: #34D399;
+  }
+
+  /* Font size dynamic scaling */
+  body.font-size-normal {
+    font-size: 16px;
+  }
+  body.font-size-large {
+    font-size: 18px;
+  }
+  body.font-size-xlarge {
+    font-size: 20px;
+  }
+
+  body.reduced-motion * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+}
